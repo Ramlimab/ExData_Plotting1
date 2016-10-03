@@ -9,7 +9,7 @@ startdate<-as.Date('2007-02-01')
 enddate<-as.Date('2007-02-02')
 newdata<-subset(rawdata,(Date>=startdate)&(Date<=enddate))
 
-png('plot3.png')
+png('plot3.png',width=480,height=480)
 with(newdata, plot(Datetime,Sub_metering_1,type='n',xlab='',ylab='Energy sub metering'))
 with(newdata, lines(Datetime,Sub_metering_1,col='black'))
 with(newdata, lines(Datetime,Sub_metering_2,col='red'))
