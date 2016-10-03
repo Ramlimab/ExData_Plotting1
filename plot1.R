@@ -9,6 +9,6 @@ startdate<-as.Date('2007-02-01')
 enddate<-as.Date('2007-02-02')
 newdata<-subset(rawdata,(Date>=startdate)&(Date<=enddate))
 
-png('plot1.png')
+png('plot1.png',width=480,height=480)
 hist(newdata$Global_active_power,main='Global Active Power',col='red',xlab='Global Active Power (kilowatts)',ylab='Frequency')
 dev.off()
