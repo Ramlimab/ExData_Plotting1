@@ -9,7 +9,7 @@ startdate<-as.Date('2007-02-01')
 enddate<-as.Date('2007-02-02')
 newdata<-subset(rawdata,(Date>=startdate)&(Date<=enddate))
 
-png('plot4.png')
+png('plot4.png',width=480,height=480)
 par(mfcol=c(2,2))
 with(newdata, plot(Datetime,Global_active_power,type='n',xlab='',ylab='Global Active Power (kilowatts)'))
 with(newdata, lines(Datetime,Global_active_power))
